@@ -1,14 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Contact - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Lato.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/pikaday.min.css">
+    <title>Contact - Subhajit Chatterjee</title>
+    <link rel="icon" href="{% static 'assets/img/my-favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Lato.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pikaday.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
 </head>
 
 <body>
@@ -16,10 +20,10 @@
         <div class="container"><a class="navbar-brand logo" href="#">Subhajit Chatterjee</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="hire-me.html">Contact me!</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact">Contact me!</a></li>
                 </ul>
             </div>
         </div>
@@ -29,12 +33,21 @@
             <div class="container">
                 <div class="heading">
                     <h2>Contact me</h2>
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-success" role="alert">
+                             <h4 class="alert-heading">{{message}}</h4>
+                        </div>
+                            
+                        {% endfor %}
+                    {% endif %}
                 </div>
-                <form>
-                    <div class="mb-3"><label class="form-label" for="name">Your Name</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="mb-3"><label class="form-label" for="subject">Subject</label><input class="form-control item" type="text" id="subject"></div>
-                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="mb-3"><label class="form-label" for="message">Message</label><textarea class="form-control item" id="message"></textarea></div>
+                <form method="post" action="/contact">
+                    {% csrf_token %}
+                    <div class="mb-3"><label class="form-label" for="name">Your Name</label><input class="form-control item" type="text" id="name" name="name"></div>
+                    <div class="mb-3"><label class="form-label" for="subject">Subject</label><input class="form-control item" type="text" id="subject" name="subject"></div>
+                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email" name="email"></div>
+                    <div class="mb-3"><label class="form-label" for="message">Message</label><textarea class="form-control item" id="message" name="message"></textarea></div>
                     <div class="mb-3"><button class="btn btn-primary btn-lg d-block w-100" type="submit">Submit Form</button></div>
                 </form>
             </div>
@@ -46,10 +59,12 @@
             <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bs-init.js' %}"></script>
+    <script src="{% static 'assets/js/pikaday.min.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>
 
 </html>

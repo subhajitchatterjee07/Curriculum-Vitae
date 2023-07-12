@@ -130,8 +130,8 @@
 .pika-button {
   cursor: pointer;
   display: block;
-  box-sizing: border-box;
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
   outline: 0;
   border: 0;
   margin: 0;
@@ -213,6 +213,7 @@
   border-bottom: none;
   cursor: help;
 }
+
 
 /* # sourceMappingURL=pikaday.min.css.map */
 

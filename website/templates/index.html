@@ -6,12 +6,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <link rel="icon" href="{% static 'assets/img/my-favicon.png' %}" type="image/x-icon">
+    <title>Home - Subhajit Chatterjee</title>
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/Lato.css' %}">
     <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/animate.min.css'%}">
     <link rel="stylesheet" href="{% static 'assets/css/pikaday.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
 </head>
 
 <body>
@@ -19,30 +21,31 @@
         <div class="container"><a class="navbar-brand logo" href="#">Subhajit Chatterjee</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="hire-me.html">Contact me!</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact">Contact me!</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <main class="page lanidng-page">
         <section class="portfolio-block block-intro">
             <div class="container">
-                <div class="avatar" style="background-image: url('{% static 'assets/img/avatars/avatar.jpg' %}');"></div>
+                <div class="avatar" style="background-image: url('{% static 'assets/img/avatars/avatar2.jpg' %}');"></div>
 
                 <div class="about-me">
-                    <p>Hello! I am <strong>Subhajit Chatterjee</strong>.&nbsp; I have passion for Advanced Machine learning, Deep Learning and Full Stack Development .</p><a class="btn btn-outline-primary" role="button" data-bss-hover-animate="tada" href="#">My&nbsp; CV</a>
+                    <p>Hello! I am <strong>Subhajit Chatterjee</strong>.&nbsp; I have passion for Advanced Machine learning, Deep Learning and Full Stack Development .</p><a class="btn btn-outline-primary" role="button" data-bss-hover-animate="tada" href="https://drive.google.com/file/d/1tvYeIifLgAHWNlAfynayB8RQJUVCNoYN/view?usp=sharing">My&nbsp; CV</a>
                 </div>
             </div>
         </section>
         <section class="portfolio-block photography">
             <div class="container">
                 <div class="row g-0">
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" data-bss-hover-animate="pulse" src="{% static 'assets/img/nature/image5.jpg' %}"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" data-bss-hover-animate="pulse" src="{% static 'assets/img/nature/image2.jpg' %}"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" data-bss-hover-animate="pulse" src="{% static 'assets/img/tech/image4.jpg' %}"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects"><img class="img-fluid image" data-bss-hover-animate="pulse" src="{% static 'assets/img/projectpics/portfolio.png' %}"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects"><img class="img-fluid image" data-bss-hover-animate="pulse" src="{% static 'assets/img/projectpics/salessphere.png' %}"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects"><img class="img-fluid image" data-bss-hover-animate="pulse" src="{% static 'assets/img/projectpics/hho.png' %}"></a></div>
 
                 </div>
             </div>
@@ -50,7 +53,7 @@
         <section class="portfolio-block call-to-action border-bottom">
             <div class="container">
                 <div class="d-flex justify-content-center align-items-center content">
-                    <h3>Like what you see?</h3><button class="btn btn-outline-primary btn-lg" type="button">Link to GitHub</button>
+                    <h3>Like what you see?</h3><a href="https://github.com/subhajitchatterjee07"><button class="btn btn-outline-primary btn-lg" type="button">Link to GitHub</button></a>
                 </div>
             </div>
         </section>
@@ -113,7 +116,7 @@
     </section>
     <footer class="page-footer">
         <div class="container">
-            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
+            
             <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
         </div>
     </footer>
@@ -121,6 +124,7 @@
     <script src="{% static 'assets/js/bs-init.js' %}"></script>
     <script src="{% static 'assets/js/pikaday.min.js' %}"></script>
     <script src="{% static 'assets/js/theme.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js'%}"></script>
 </body>
 
 </html>

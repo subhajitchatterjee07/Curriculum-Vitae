@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'assets/img/my-favicon.png' %}" type="image/x-icon">
+    <title>Projects - Subhajit Chatterjee</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Lato.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pikaday.min.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#">Subhajit Chatterjee</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact">Contact me!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <div class="container">
+                <!-- Start: portfolio heading -->
+                <div class="heading">
+                    <h2>Projects</h2>
+                </div><!-- End: portfolio heading -->
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="https://github.com/subhajitchatterjee07/Meme_Monster-A-Social-Media-Website"><img class="card-img-top scale-on-hover" src="{% static 'assets/img/projectpics/p1.png' %}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Meme-Monster - A Social Media Website</a></h6>
+                                <p class="text-muted card-text">End to End Social Media Website for sharing memes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="http://subhajit.pythonanywhere.com/"><img class="card-img-top scale-on-hover" src="{% static 'assets/img/projectpics/p2.png' %}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">SalesSphere - A Sample Company Portfolio</a></h6>
+                                <p class="text-muted card-text">An End to End Portfolio Website for a Cloud Enterprise.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="https://github.com/subhajitchatterjee07/Extreme-Learning-Machine-optimized-with-Harris-Hawk-Algorithm"><img class="card-img-top scale-on-hover" src="{% static 'assets/img/projectpics/p3.png' %}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Harris Hawk Algorithm in ELMs</a></h6>
+                                <p class="text-muted card-text">Using Evolutionary computation to increase optimize Extreme Learning Models.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="https://github.com/subhajitchatterjee07/Salp-Swarm-algorithms-and-use-in-optimisation-of-accuracy"><img class="card-img-top scale-on-hover" src="{% static 'assets/img/projectpics/p4.png' %}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Salp Swarm Algorithm in Deep Learning Models</a></h6>
+                                <p class="text-muted card-text">Using Swarm algorithms to increase accuracy in DL Models.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="https://github.com/subhajitchatterjee07/Spam-Detection-using-NLTK"><img class="card-img-top scale-on-hover" src="{% static 'assets/img/projectpics/p5.png' %}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Spam Detection Model using NLTK</a></h6>
+                                <p class="text-muted card-text">Using NLP features to classify an incoming message as legitimate or spam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="https://github.com/subhajitchatterjee07/Text-Detection-using-openCV"><img class="card-img-top scale-on-hover" src="{% static 'assets/img/projectpics/p6.png' %}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Text Detection using OpenCV</a></h6>
+                                <p class="text-muted card-text">Text detection using PyTesseract and openCV.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
+        </div>
+    </footer>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bs-init.js' %}"></script>
+    <script src="{% static 'assets/js/pikaday.min.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+</body>
+
+</html>
